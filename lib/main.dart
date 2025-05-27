@@ -34,23 +34,17 @@ class TabBarExample extends StatelessWidget {
               length: 2,
               child: Column(
                 children: [
+                  TabBar(
+                    tabs: <Widget>[
+                      Tab(icon: Icon(Icons.cloud_outlined)),
+                      Tab(icon: Icon(Icons.beach_access_sharp)),
+                    ],
+                  ),
                   Expanded(
-                    child: Column(
-                      children: [
-                        TabBar(
-                          tabs: <Widget>[
-                            Tab(icon: Icon(Icons.cloud_outlined)),
-                            Tab(icon: Icon(Icons.beach_access_sharp)),
-                          ],
-                        ),
-                        Expanded(
-                          child: TabBarView(
-                            children: <Widget>[
-                              Center(child: Text("It's cloudy here")),
-                              Center(child: Text("It's rainy here")),
-                            ],
-                          ),
-                        ),
+                    child: TabBarView(
+                      children: <Widget>[
+                        Center(child: Text("It's cloudy here")),
+                        Center(child: Text("It's rainy here")),
                       ],
                     ),
                   ),
